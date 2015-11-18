@@ -26,6 +26,7 @@ void loop() {
 
   if (irrecv.decode(&results)) {
     if(millis() - lastPulse > 300) {
+      Serial.write('\r');
       Serial.write('\n');
     }
 
@@ -34,6 +35,7 @@ void loop() {
     if(results.decode_type == SONY) {
       counter++;
       Serial.write('.');
+      Serial.print(results.value);
       digitalWrite(LED_PIN, HIGH);
       lastCorrectPulse = millis();
     } else {

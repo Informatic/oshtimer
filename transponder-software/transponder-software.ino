@@ -2,7 +2,7 @@
 
 // IRLED = P1 / PB1
 
-const int RACER_ID = 0xa90;
+const int RACER_ID = 0x859;
 
 IRsend irsend;
 
